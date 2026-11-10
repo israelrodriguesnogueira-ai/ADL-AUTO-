@@ -1,0 +1,33 @@
+name: Validar Central 6D
+on:
+  push:
+    branches: [feature/central-operacional-6d]
+  pull_request:
+    paths:
+      - 'central-6d.html'
+      - 'data/estado-operacional.json'
+      - '.github/workflows/validar-central-6d.yml'
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar inventario e regras de seguranca
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path('data/estado-operacional.json').read_text())
+          assert data['schema_version']==1
+          assert data['budget_brl_incremental']==0
+          ids={p['id'] for p in data['projects']}
+          assert ids=={'adl-midia','shopee-gestao','adl-auto'}
+          for p in data['projects']:
+              assert p['repository'].startswith('israelrodriguesnogueira-ai/')
+              assert p['next'].strip()
+              assert p['production_change_authorized'] is False
+          html=Path('central-6d.html').read_text()
+          assert 'data/estado-operacional.json' in html
+          assert 'escapeHtml' in html
+          print('VALIDACAO 6D OK: tres projetos, orcamento zero, sem publicacao automatica')
+          PY

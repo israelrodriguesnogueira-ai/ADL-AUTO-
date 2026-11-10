@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-10",
+  "budget_brl_incremental": 0,
+  "projects": [
+    {
+      "id": "adl-midia",
+      "repository": "israelrodriguesnogueira-ai/ADL-MIDIA",
+      "status": "em desenvolvimento",
+      "next": "Exportação demonstrativa validada no Actions #42892976326; integrar geração de movimento realista e validar fotos originais antes da publicação",
+      "production_change_authorized": false
+    },
+    {
+      "id": "shopee-gestao",
+      "repository": "israelrodriguesnogueira-ai/SHOEEP-GESTAO",
+      "status": "verificação pendente",
+      "next": "README inicial confirmado; implementar interface e integração da loja após especificação e autorização",
+      "production_change_authorized": false
+    },
+    {
+      "id": "adl-auto",
+      "repository": "israelrodriguesnogueira-ai/ADL-AUTO-",
+      "status": "central 6D em preparação",
+      "next": "Painel criado em branch de desenvolvimento e PR #1 em rascunho; validar no navegador e confirmar GitHub Actions",
+      "production_change_authorized": false
+    }
+  ]
+}
