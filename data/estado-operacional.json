@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-10",
+  "budget_brl_incremental": 0,
+  "projects": [
+    {
+      "id": "adl-midia",
+      "repository": "israelrodriguesnogueira-ai/ADL-MIDIA",
+      "status": "em desenvolvimento",
+      "next": "Conferir execução do teste de exportação e validar arquivo",
+      "production_change_authorized": false
+    },
+    {
+      "id": "shopee-gestao",
+      "repository": "israelrodriguesnogueira-ai/SHOEEP-GESTAO",
+      "status": "verificação pendente",
+      "next": "Inspecionar arquivos e definir integrações",
+      "production_change_authorized": false
+    },
+    {
+      "id": "adl-auto",
+      "repository": "israelrodriguesnogueira-ai/ADL-AUTO-",
+      "status": "central 6D em preparação",
+      "next": "Implementar painel operacional e testes",
+      "production_change_authorized": false
+    }
+  ]
+}
